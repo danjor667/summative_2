@@ -68,7 +68,7 @@ def main():
     model_name = "dqn_model_default_run.zip"
     model = DQN.load(model_name)
     env_id = "BreakoutNoFrameskip-v4"
-    rewards, lengths = evaluate_agent(model, env_id, num_episodes=40)
+    rewards, lengths = evaluate_agent(model, env_id, num_episodes=20)
 
 
 if __name__ == "__main__":

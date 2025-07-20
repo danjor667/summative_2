@@ -105,9 +105,9 @@ def main():
                 "exploration_fraction": 0.1,
                 "exploration_initial_eps": 1.0,
                 "exploration_final_eps": 0.05,
-                "train_freq": 4,
-                "gradient_steps": 1,
-                "target_update_interval": 1000,
+                "train_freq": 8,
+                "gradient_steps": 2,
+                "target_update_interval": 2000,
             },
         },
         {
@@ -121,9 +121,9 @@ def main():
                 "exploration_fraction": 0.1,
                 "exploration_initial_eps": 1.0,
                 "exploration_final_eps": 0.05,
-                "train_freq": 4,
-                "gradient_steps": 1,
-                "target_update_interval": 1000,
+                "train_freq": 8,
+                "gradient_steps": 2,
+                "target_update_interval": 2000,
             },
         },
         {
@@ -137,9 +137,9 @@ def main():
                 "exploration_fraction": 0.1,
                 "exploration_initial_eps": 1.0,
                 "exploration_final_eps": 0.05,
-                "train_freq": 4,
-                "gradient_steps": 1,
-                "target_update_interval": 1000,
+                "train_freq": 8,
+                "gradient_steps": 2,
+                "target_update_interval": 2000,
             },
         },
     ]
@@ -154,7 +154,7 @@ def main():
         stats = train_with_hyperparams(
             hp_set["params"],
             hp_set["name"],
-            timesteps=2000000,
+            timesteps=1000000,
         )
 
         results.append(
