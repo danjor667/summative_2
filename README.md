@@ -1,3 +1,6 @@
+Link to the video: 
+https://drive.google.com/file/d/11OqJzBPpXrxbFs5FtNnSgunZDkbAhTy_/view?usp=sharing
+
 # DQN Hyperparameter Tuning Results
 
 This document presents the results of hyperparameter tuning experiments for a Deep Q-Network (DQN) agent trained on the Breakout Atari game. The experiments were designed to evaluate the impact of different hyperparameter configurations on the agent's performance.
@@ -145,7 +148,7 @@ This project was completed as a collaborative effort by a team of three students
 - Hyperparameter tuning experiments for batch size
 - Data visualization and learning curve analysis
 
-### Your Name
+### Mugisha Kenny Kevin
 - Implementation of the training callbacks
 - Hyperparameter tuning experiments for exploration parameters
 - Performance optimization and debugging
