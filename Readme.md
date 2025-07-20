@@ -46,9 +46,9 @@ Watch the trained agent in action:
 
 | Set | Learning Rate | Gamma | Batch Size | Epsilon Start | Epsilon End | Epsilon Decay | Noted Behavior                              |
 | --- | ------------- | ----- | ---------- | ------------- | ----------- | ------------- | ------------------------------------------- |
-| 1   | 0.0001        | 0.99  | 32         | 1.0           | 0.05        | 0.1           | Stable reward increase, good convergence    |
-| 2   | 0.0005        | 0.98  | 64         | 1.0           | 0.1         | 0.2           | Faster learning, slightly unstable          |
-| 3   | 0.0001        | 0.99  | 16         | 1.0           | 0.01        | 0.05          | Slower learning, better long-term stability |
+| 1   | 0.0..       | 0.99  | 32         | 1.0           | 0.05        | 0.1           | Stable reward increase, good convergence    |
+| 2   | 0.0..        | 0.98  | 64         | 1.0           | 0.1         | 0.2           | Faster learning, slightly unstable          |
+| 3   | 0.00..       | 0.99  | 16         | 1.0           | 0.01        | 0.05          | Slower learning, better long-term stability |
 
 **Selected Set:** Set 1
 It produced consistent reward improvements and steady performance during evaluation.
