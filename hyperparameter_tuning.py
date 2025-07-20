@@ -7,6 +7,8 @@ from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.atari_wrappers import AtariWrapper
 
+from train import create_environment
+
 
 class TrainingCallback(BaseCallback):
     def __init__(self, verbose=0):
@@ -41,6 +43,7 @@ def train_with_hyperparams(hyperparams, experiment_name, timesteps=100000):
 
     # Create and wrap the environment
     env_id = "BreakoutNoFrameskip-v4"
+    env = create_environment(env_id)
     env = gym.make(env_id, render_mode=None)
     env = AtariWrapper(env)
     env = Monitor(env, log_dir)
@@ -92,26 +95,10 @@ def main():
     # Define different hyperparameter sets to test
     hyperparameter_sets = [
         {
-            "name": "default",
-            "params": {
-                "learning_rate": 1e-4,
-                "buffer_size": 100000,
-                "learning_starts": 10000,
-                "batch_size": 32,
-                "gamma": 0.99,
-                "exploration_fraction": 0.1,
-                "exploration_initial_eps": 1.0,
-                "exploration_final_eps": 0.05,
-                "train_freq": 4,
-                "gradient_steps": 1,
-                "target_update_interval": 1000,
-            },
-        },
-        {
             "name": "high_lr",
             "params": {
                 "learning_rate": 5e-4,  # Higher learning rate
-                "buffer_size": 100000,
+                "buffer_size": 500000,
                 "learning_starts": 10000,
                 "batch_size": 32,
                 "gamma": 0.99,
@@ -127,7 +114,7 @@ def main():
             "name": "high_gamma",
             "params": {
                 "learning_rate": 1e-4,
-                "buffer_size": 100000,
+                "buffer_size": 500000,
                 "learning_starts": 10000,
                 "batch_size": 32,
                 "gamma": 0.995,  # Higher discount factor
@@ -143,7 +130,7 @@ def main():
             "name": "large_batch",
             "params": {
                 "learning_rate": 1e-4,
-                "buffer_size": 100000,
+                "buffer_size": 500000,
                 "learning_starts": 10000,
                 "batch_size": 64,  # Larger batch size
                 "gamma": 0.99,
@@ -167,7 +154,7 @@ def main():
         stats = train_with_hyperparams(
             hp_set["params"],
             hp_set["name"],
-            timesteps=100000,  # Reduced for quicker experiments
+            timesteps=2000000,
         )
 
         results.append(
