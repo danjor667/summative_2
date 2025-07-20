@@ -142,7 +142,7 @@ This project was completed as a collaborative effort by a team of three students
 - Hyperparameter tuning experiments for learning rate and gamma
 - Documentation and analysis of results
 
-### Your Name
+### Jules Gatete
 - Environment setup and configuration
 - Implementation of the evaluation framework
 - Hyperparameter tuning experiments for batch size
