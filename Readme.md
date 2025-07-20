@@ -38,7 +38,7 @@ python play.py
 
 Watch the trained agent in action:
 
-**\[Insert Your YouTube Link Here]**
+**\[video Link Here]**
 
 ---
 
