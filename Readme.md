@@ -1,5 +1,5 @@
-Link to the video: 
-https://drive.google.com/file/d/11OqJzBPpXrxbFs5FtNnSgunZDkbAhTy_/view?usp=sharing
+[Link to the video:] 
+(https://drive.google.com/file/d/11OqJzBPpXrxbFs5FtNnSgunZDkbAhTy_/view?usp=sharing)
 
 # DQN Hyperparameter Tuning Results
 
